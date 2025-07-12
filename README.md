@@ -1,7 +1,7 @@
 # Salt Lint for GitHub Action
 This action allows you to run `salt-lint`.
 
-The project is heavily based on [ansible-lint-action](https://github.com/ansible/ansible-lintn), which was created by [Stefan Stölzle](/stoe) and is now maintained as part of the [Ansible](https://ansible.com/) by [Red Hat](https://redhat.com/) project.
+The project is heavily based on [ansible-lint-action](https://github.com/ansible/ansible-lint), which was created by [Stefan Stölzle](/stoe) and is now maintained as part of the [Ansible](https://ansible.com/) by [Red Hat](https://redhat.com/) project.
 
 ## Usage
 
