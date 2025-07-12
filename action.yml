@@ -1,6 +1,6 @@
-
+---
 name: 'salt-lint'
-description: 'Run Salt Lint'
+description: Run Salt Lint
 author: 'Roald Nefs'
 branding:
   icon: 'activity'
