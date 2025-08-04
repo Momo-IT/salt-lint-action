@@ -1,14 +1,12 @@
-FROM python:3.9-buster
+FROM python:3.11
 
 LABEL "maintainer"="Roald Nefs <info@roaldnefs.com>"
 LABEL "repository"="https://github.com/roaldnefs/salt-lint-action"
 LABEL "homepage"="https://github.com/roaldnefs/salt-lint-action"
 
-# Update APT packages
-RUN apt-get update && apt-get upgrade -y -o DPkg::Options::=--force-confold
-
+COPY entrypoint.sh /entrypoint.sh
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install salt-lint
-RUN pip install salt-lint
+RUN set -eux && chmod +x /entrypoint.sh && python3 -m pip install salt-lint
 
-ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

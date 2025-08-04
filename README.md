@@ -1,7 +1,7 @@
 # Salt Lint for GitHub Action
 This action allows you to run `salt-lint`.
 
-The project is heavily based on [ansible-lint-action](https://github.com/ansible/ansible-lint-action), which was created by [Stefan Stölzle](/stoe) and is now maintained as part of the [Ansible](https://ansible.com/) by [Red Hat](https://redhat.com/) project.
+The project is heavily based on [ansible-lint-action](https://github.com/ansible/ansible-lint), which was created by [Stefan Stölzle](/stoe) and is now maintained as part of the [Ansible](https://ansible.com/) by [Red Hat](https://redhat.com/) project.
 
 ## Usage
 
@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Salt Lint Action Demo
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Run salt-lint
-      uses: roaldnefs/salt-lint-action@master
+      uses: roaldnefs/salt-lint-action@0.0.3
       env:
         ACTION_STATE_NAME: init.sls
 ```
@@ -31,7 +31,7 @@ If you want to analyse all `^.*\.(sls|jinja|j2|tmpl|tst)$` files in the reposito
         SALT_LINT_EXTRA_PARAMS: '-v'
 ```
 
-N.B. Use `v0.0.1` or any other valid tag, or branch, or commit SHA instead of `master` to pin the action to use a specific version.
+N.B. Use `v0.0.3` or any other valid tag, or branch, or commit SHA instead of `master` to pin the action to use a specific version.
 
 ### Environment Variables
 - **ACTION_STATE_NAME**: (optional) defaults to `init.sls`
@@ -44,4 +44,4 @@ N.B. Use `v0.0.1` or any other valid tag, or branch, or commit SHA instead of `m
 The Dockerfile and associated scripts and documentation in this project are released under the [MIT](license).
 
 ## Credits
-The GitHub action is heavily based on [ansible-lint-action](https://github.com/ansible/ansible-lint-action). The initial [ansible-lint-action](https://github.com/ansible/ansible-lint-action) has been created by [Stefan Stölzle](/stoe) at [stoe/actions](https://github.com/stoe/actions).
+The GitHub action is heavily based on [ansible-lint-action](https://github.com/ansible/ansible-lint). The initial [ansible-lint-action](https://github.com/ansible/ansible-lint) has been created by [Stefan Stölzle](/stoe) at [stoe/actions](https://github.com/stoe/actions).
